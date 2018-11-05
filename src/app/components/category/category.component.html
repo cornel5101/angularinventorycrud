@@ -1,0 +1,71 @@
+
+ <div class="card">
+  <div class="card-header">
+    Category Table
+  </div>
+  <div class="card-body">
+    <div class="container">
+      <h2>Manage Category</h2>          
+      <table class="table table-dark table-hover">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Category</th>
+            <th>Parent</th>
+             <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Electronics</td>
+            <td>Root</td>
+            <td><a href="#" class="btn btn-success btn-sm">Active</a></td>
+            <td>
+            <a href="#" class="btn btn-danger btn-sm">Delete</a>
+            <a href="#" class="btn btn-info btn-sm">Edit</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- Open the Modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+      Open Modal
+    </button>
+  </div>
+</div>
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Manage Category</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body">
+        <div id="category_form">
+          <div class="form-group">
+            <label>Category Name</label>
+            <input  name="categoryName" type="text" class="form-control" >
+          </div>
+
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Add</button>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>

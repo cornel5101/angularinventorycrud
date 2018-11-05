@@ -1,0 +1,131 @@
+<div class="container">
+
+  <div class="card" bg-color="primary">
+    <div class="card-header">
+      New Order
+    </div>
+    <div class="card-body">
+      <div class="form-group row">
+        <label class="col-sm-3" align="right">Order Date</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control form-control-sm" name="orderDate" value="yyy-mm-dd">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-3" align="right">Customer Name</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control form-control-sm" placeholder="Enter Your Name">
+        </div>
+      </div>
+
+
+      <div class="card" style="box-shadow: 0 0 25px 0 lightgrey;">
+        <div class="card-body">
+          <h4>Make a order list</h4>
+          <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Item Name</th>
+                <th scope="col">Total Quantity</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Price</th>
+                <th scope="col">Total</th>
+              </tr>
+            </thead>
+            <tbody id="invoice_item">
+              <tr>
+                <td>
+                  <b id="number">1</b>
+                </td>
+                <td>
+                  <select name="product" class="form-control form-control-sm">
+                    <option>Washing Machine</option>
+                    <option>Samsung TV</option>
+                  </select>
+                  <td>
+                    <input name="tqty" type="text" class="form-control form-control-sm" readonly>
+                  </td>
+                  <td>
+                    <input name="qty" type="text" class="form-control form-control-sm">
+                  </td>
+                  <td>
+                    <input type="text" class="form-control form-control-sm" readonly>
+                  </td>
+                  <td>
+                    <input name="totalPrice" type="text" class="removeBorder" maxlength="5" readonly>
+                  </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- Table ends here -->
+
+          <button id="add" style="width:159px;" class="btn btn-success">Add</button>
+          <br>
+          <br>
+          <button id="remove" style="width:159px;" class="btn btn-danger">Remove</button>
+
+        </div>
+        <!-- Card Body ends here -->
+      </div>
+      <!-- Order card list ends here -->
+      <br>
+
+      <div class="form-group row">
+        <label for="subTotal" class="col-sm-3 col-form-label" align="right">Sub Total</label>
+        <div class="col-sm-6">
+          <input type="text" name="subTotal" class="form-control form-control-sm" id="subTotal">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="tax" class="col-sm-3 col-form-label" align="right">GST (18%)</label>
+        <div class="col-sm-6">
+          <input type="text" name="tax" class="form-control form-control-sm" id="tax">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="discount" class="col-sm-3 col-form-label" align="right">Discount</label>
+        <div class="col-sm-6">
+          <input type="text" name="discount" class="form-control form-control-sm" id="discount">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="netTotal" class="col-sm-3 col-form-label" align="right">Net Total</label>
+        <div class="col-sm-6">
+          <input type="text" name="netTotal" class="form-control form-control-sm" id="netTotal">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="amountPaid" class="col-sm-3 col-form-label" align="right">Paid</label>
+        <div class="col-sm-6">
+          <input type="text" name="amountPaid" class="form-control form-control-sm" id="amountPaid" />
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="due" class="col-sm-3 col-form-label" align="right">Due</label>
+        <div class="col-sm-6">
+          <input type="text" name="due" class="form-control form-control-sm" id="gst">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="paymentMethodId" class="col-sm-3 col-form-label" align="right">Payment Method</label>
+        <div class="col-sm-6">
+          <select name="paymentMethodId" class="form-control form-control-sm" id="paymentMethodId">
+            <option>Cash</option>
+            <option>Card</option>
+            <option>Draft</option>
+            <option>Cheque</option>
+          </select>
+        </div>
+      </div>
+
+      <input type="submit" id="order_form" style="width:150px;" class="btn btn-info" value="Order">
+      <br>
+      <br>
+      <input type="submit" id="print_invoice" style="width:150px;" class="btn btn-success" value="Print">
+
+    </div>
+  </div>
+
+</div>
